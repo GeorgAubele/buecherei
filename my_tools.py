@@ -72,3 +72,10 @@ def check_ISBN(ISBN: str) -> bool:
 # 'Publisher': '',
 # 'Year': '2022',
 # 'Language': 'de'}
+
+
+def is_past_date(date_text):
+    from datetime import datetime
+    current_date = datetime.now()
+    input_date = datetime.strptime(date_text, "%d.%m.%Y")
+    return input_date < current_date

@@ -22,6 +22,7 @@ from my_tools import (
     liststring_to_list,
     list_to_liststring,
     format_date,
+    is_past_date,
 )
 
 # SQLite
@@ -833,7 +834,7 @@ def lending():
                     dict(Titel=r[0], Ausleihdatum=format_date(r[1])) for r in result
                 ]
             return render_template(
-                "lending.html", a_v=ausleiher.Vorname, a_n=ausleiher.Nachname, a_d = date_to_str(ausleiher.Bezahlt_bis) , rows=rows
+                "lending.html", a_v=ausleiher.Vorname, a_n=ausleiher.Nachname, a_d = date_to_str(ausleiher.Bezahlt_bis) , rows=rows, is_past_date=is_past_date
             )
 
         elif "ISBN_search" in request.form:
