@@ -1,0 +1,44 @@
+{
+	"files": [
+		{
+			"path": "Bibliothek.py",
+			"bookmarks": [
+				{
+					"line": 117,
+					"column": 1,
+					"label": "Index"
+				},
+				{
+					"line": 257,
+					"column": 13,
+					"label": "BOOK SEARCH"
+				},
+				{
+					"line": 517,
+					"column": 2,
+					"label": "Book Import"
+				},
+				{
+					"line": 669,
+					"column": 2,
+					"label": "Book Management"
+				},
+				{
+					"line": 792,
+					"column": 3,
+					"label": "Book Lending"
+				},
+				{
+					"line": 923,
+					"column": 2,
+					"label": "User Management"
+				},
+				{
+					"line": 1013,
+					"column": 2,
+					"label": "Report"
+				}
+			]
+		}
+	]
+}
