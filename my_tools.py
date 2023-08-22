@@ -1,6 +1,5 @@
 from datetime import datetime, date
 
-# from isbntools.app import *
 from isbnlib import *
 
 
