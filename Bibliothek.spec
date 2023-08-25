@@ -8,7 +8,7 @@ a = Analysis(
     ['Bibliothek.py'],
     pathex=[],
     binaries=[],
-    datas=[('templates', 'templates'), ('static', 'static'), ('instance', 'instance')],
+    datas=[],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
