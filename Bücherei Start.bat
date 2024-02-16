@@ -1,0 +1,1 @@
+START /B python.exe .\Bibliothek.py
