@@ -531,19 +531,22 @@ def book_import():
             ISBNs = tmp_txt.split()
             result_txt = ""
             for item in ISBNs:
-                book = ISBN_to_book(item, "goob")
-                result_txt += (
-                    "ISBN:\t  "
-                    + book["ISBN-13"]
-                    + "\n"
-                    + "Titel:\t  "
-                    + book["Title"]
-                    + "\n "
-                    + "Autoren:\t  "
-                    + ", ".join(book["Authors"])
-                    + "\n \n"
-                )
-                my_book_list.append(book)
+                try:
+                    book = ISBN_to_book(item, "goob")
+                    result_txt += (
+                        "ISBN:\t  "
+                        + book["ISBN-13"]
+                        + "\n"
+                        + "Titel:\t  "
+                        + book["Title"]
+                        + "\n "
+                        + "Autoren:\t  "
+                        + ", ".join(book["Authors"])
+                        + "\n \n"
+                    )
+                    my_book_list.append(book)
+                except Exception as e:
+                    result_txt += "*** kein Buch gefunden für " + item + "*** \n \n"
 
             return render_template(
                 "book_import.html", result_txt=result_txt, ISBNs=tmp_txt
@@ -555,19 +558,22 @@ def book_import():
             ISBNs = tmp_txt.split()
             result_txt = ""
             for item in ISBNs:
-                book = ISBN_to_book(item, "openl")
-                result_txt += (
-                    "ISBN:\t  "
-                    + book["ISBN-13"]
-                    + "\n"
-                    + "Titel:\t  "
-                    + book["Title"]
-                    + "\n "
-                    + "Autoren:\t  "
-                    + ", ".join(book["Authors"])
-                    + "\n \n"
-                )
-                my_book_list.append(book)
+                try:
+                    book = ISBN_to_book(item, "openl")
+                    result_txt += (
+                        "ISBN:\t  "
+                        + book["ISBN-13"]
+                        + "\n"
+                        + "Titel:\t  "
+                        + book["Title"]
+                        + "\n "
+                        + "Autoren:\t  "
+                        + ", ".join(book["Authors"])
+                        + "\n \n"
+                    )
+                    my_book_list.append(book)
+                except Exception as e:
+                    result_txt += "*** kein Buch gefunden für " + item + "*** \n \n"
 
             return render_template(
                 "book_import.html", result_txt=result_txt, ISBNs=tmp_txt
@@ -579,19 +585,22 @@ def book_import():
             ISBNs = tmp_txt.split()
             result_txt = ""
             for item in ISBNs:
-                book = ISBN_to_book(item, "wiki")
-                result_txt += (
-                    "ISBN:\t  "
-                    + book["ISBN-13"]
-                    + "\n"
-                    + "Titel:\t  "
-                    + book["Title"]
-                    + "\n "
-                    + "Autoren:\t  "
-                    + ", ".join(book["Authors"])
-                    + "\n \n"
-                )
-                my_book_list.append(book)
+                try:
+                    book = ISBN_to_book(item, "wiki")
+                    result_txt += (
+                        "ISBN:\t  "
+                        + book["ISBN-13"]
+                        + "\n"
+                        + "Titel:\t  "
+                        + book["Title"]
+                        + "\n "
+                        + "Autoren:\t  "
+                        + ", ".join(book["Authors"])
+                        + "\n \n"
+                    )
+                    my_book_list.append(book)
+                except Exception as e:
+                    result_txt += "*** kein Buch gefunden für " + item + "*** \n \n"
 
             return render_template(
                 "book_import.html", result_txt=result_txt, ISBNs=tmp_txt
